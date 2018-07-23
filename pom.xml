@@ -21,6 +21,31 @@
 </dependency>
   </dependencies>
   <build>
-    <finalName>Hello</finalName>
+   <pluginManagement>
+<plugins>
+	<plugin>
+		<groupId>com.maven.World</groupId>
+		<artifactId>Hello</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+
+			
+		<configuration>
+		<url>http://maven.apache.org</url>
+		</configuration>
+		<executions>
+		<execution>
+			<id>exec</id>
+			<phase>package</phase>
+			<configuration>
+				<url>http://maven.apache.org</url>
+			</configuration>
+				<goals>
+				<goal>clean</goal>
+				</goals>
+				</execution>
+		</executions>
+		</plugin>
+		</pluginManagement>
+		
   </build>
 </project>
